@@ -40,7 +40,7 @@ def get_content(html):
 def get_content_into(info_href):
     soup = BeautifulSoup(info_href, 'html.parser')
     info_text = soup.find('div', class_="text_2").get_text()
-    box_for_info_text.append(info_text)
+    box_for_info_text.append(info_text.replace("<…>","''"))
 
 
 images = []
